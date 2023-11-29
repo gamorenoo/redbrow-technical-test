@@ -14,7 +14,7 @@ namespace redbrow_technical_test.Application.Users
         /// <summary>
         /// Identificador único del usuario.
         /// </summary>
-        public Guid Id { get; set; }
+        public Guid? Id { get; set; }
 
         /// <summary>
         /// Nombre del usuario.

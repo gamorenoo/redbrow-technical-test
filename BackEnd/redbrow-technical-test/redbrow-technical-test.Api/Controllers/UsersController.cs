@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using redbrow_technical_test.Application.Users;
+using redbrow_technical_test.Application.Users.Create;
 using redbrow_technical_test.Application.Users.GetAll;
 using redbrow_technical_test.Application.Users.GetById;
 using redbrow_technical_test.Application.Users.GetPaginated;
@@ -19,6 +20,12 @@ namespace redbrow_technical_test.Api.Controllers
         public UsersController(ILogger<UsersController> logger)
         {
             _logger = logger;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<UserDto>> Create([FromForm] CreateUserCommand createUserCommand)
+        {
+            return await Mediator.Send(createUserCommand);
         }
 
         [HttpGet]

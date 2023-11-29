@@ -29,6 +29,7 @@ namespace redbrow_technical_test.Infrastructure
             services.AddTransient(typeof(IQueryRepository<>), typeof(QueryRepository<>));
 
             services.AddScoped<IUserQueryRepository, UserQueryRepository>();
+            services.AddScoped<IUserCommandRepository, UserCommandRepository>();
 
             return services;
         }
