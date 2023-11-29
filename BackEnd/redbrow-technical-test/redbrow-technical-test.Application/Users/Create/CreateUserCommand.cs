@@ -6,7 +6,7 @@ namespace redbrow_technical_test.Application.Users.Create
 {
     public class CreateUserCommand: IRequest<UserDto>
     {
-        public UserDto User { get; set; }
+        public UserCreateDto User { get; set; }
     }
 
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, UserDto>

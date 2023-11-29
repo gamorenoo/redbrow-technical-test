@@ -33,7 +33,7 @@ namespace redbrow_technical_test.Api.Controllers
         /// <summary>
         /// Crear usuario
         /// </summary>
-        /// <param name="createUserCommand"></param>
+        /// <param name="user"></param>
         /// <returns>Usuario creado</returns>
         /// <response code="200">Usuario Creado</response>
         /// <response code="401">No autorizado</response>
@@ -45,15 +45,15 @@ namespace redbrow_technical_test.Api.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpPost]
-        public async Task<ActionResult<UserDto>> Create([FromForm] CreateUserCommand createUserCommand)
+        public async Task<ActionResult<UserDto>> Create([FromBody] UserCreateDto user)
         {
-            return await Mediator.Send(createUserCommand);
+            return await Mediator.Send(new CreateUserCommand() { User = user });
         }
 
         /// <summary>
         /// Actualizar usuario
         /// </summary>
-        /// <param name="updateUserCommand"></param>
+        /// <param name="user"></param>
         /// <returns>Usuario creado</returns>
         /// <response code="200">Usuario Actualizado</response>
         /// <response code="401">No autorizado</response>
@@ -65,9 +65,9 @@ namespace redbrow_technical_test.Api.Controllers
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpPut]
-        public async Task<ActionResult<UserDto>> Put([FromForm] UpdateUserCommand updateUserCommand)
+        public async Task<ActionResult<UserDto>> Put([FromBody] UserDto user)
         {
-            return await Mediator.Send(updateUserCommand);
+            return await Mediator.Send(new UpdateUserCommand() { User = user });
         }
 
         /// <summary>

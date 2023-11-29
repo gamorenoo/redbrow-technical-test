@@ -39,3 +39,40 @@ Asegúrate de tener Docker y Docker Compose instalados en tu máquina antes de c
 
 
 ## Instrucciones para Ejecutar FRONT
+
+Este proyecto hace uso del Api para realizar las operaciones CRUD mencionadas anterioemente
+
+### Requisitos Previos
+
+1. Asegúrate de tener Node.js y npm instalados en tu máquina.
+
+### Configuración y Ejecución del Frontend (React)
+
+1. Navega a la raíz del proyecto.
+
+2. Ejecuta el siguiente comando para instalar las dependencias del frontend:
+
+    ```bash
+    npm install
+    ```
+
+3. Luego, ejecuta el siguiente comando para iniciar la aplicación React:
+
+    ```bash
+    npm start
+    ```
+
+4. Abre tu navegador y accede a `http://localhost:3000` para ver la aplicación en acción.
+
+### Usuario de Prueba para Autenticación
+
+- Usuario: `gustavoamoreno@outlook.com`
+- Contraseña: `0123456789`
+
+## Características del Proyecto
+
+- **Autenticación JWT:** La aplicación utiliza JWT para autenticar a los usuarios. Un token JWT se obtiene al iniciar sesión con las credenciales proporcionadas.
+- **Operaciones CRUD de Usuarios:** La aplicación permite crear, leer usuarios a través de la API.
+
+## Notas Importantes
+
