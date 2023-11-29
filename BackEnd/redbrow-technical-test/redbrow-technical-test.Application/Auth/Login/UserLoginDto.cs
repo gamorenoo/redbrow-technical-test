@@ -10,7 +10,7 @@ namespace redbrow_technical_test.Application.Auth.Login
     /// <summary>
     /// Dto para el login en la Aplicación
     /// </summary>
-    public class UserDto
+    public class UserLoginDto
     {
         /// <summary>
         /// Correo electrónico

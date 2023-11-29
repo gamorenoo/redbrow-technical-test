@@ -31,7 +31,7 @@ namespace redbrow_technical_test.Api.Controllers
         [HttpPost("login", Name = "login")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<ActionResult<string>> Login([FromBody] UserDto user)
+        public async Task<ActionResult<string>> Login([FromBody] UserLoginDto user)
         {
             return await Mediator.Send(new LoginQuery { User = user });
         }

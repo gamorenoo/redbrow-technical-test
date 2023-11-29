@@ -19,19 +19,16 @@ namespace redbrow_technical_test.Infrastructure.Persistence.Configurations
             builder.HasKey("Id");
 
             builder.Property(e => e.Name)
-                .HasMaxLength(200)
+                .HasMaxLength(100)
                 .IsUnicode(false);
 
             builder.Property(e => e.Email)
-                .HasMaxLength(200)
+                .HasMaxLength(100)
                 .IsUnicode(false);
 
             builder.Property(e => e.Nationality)
-                .HasMaxLength(200)
+                .HasMaxLength(100)
                 .IsUnicode(false);
-
-            builder.Property(e => e.Age)
-                .HasMaxLength(3);
 
         }
     }

@@ -15,11 +15,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Common\" />
+    <ProjectReference Include="..\redbrow-technical-test.Domain\redbrow-technical-test.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\redbrow-technical-test.Domain\redbrow-technical-test.Domain.csproj" />
+    <Folder Include="Users\Create\" />
+    <Folder Include="Users\Delete\" />
+    <Folder Include="Users\Update\" />
   </ItemGroup>
 
 </Project>

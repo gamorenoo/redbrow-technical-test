@@ -1,12 +1,15 @@
-﻿using redbrow_technical_test.Domain.Common;
+﻿using Application.Common.Mappings;
+using redbrow_technical_test.Domain.Users;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace redbrow_technical_test.Domain.Users
+namespace redbrow_technical_test.Application.Users
 {
-    /// <summary>
-    /// Usuario del sistema
-    /// </summary>
-    public class User: AuditableEntity
+    public class UserDto : IMapFrom<User>
     {
         /// <summary>
         /// Identificador único del usuario.

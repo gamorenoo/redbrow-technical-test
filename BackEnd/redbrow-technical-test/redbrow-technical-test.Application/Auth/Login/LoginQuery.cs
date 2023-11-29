@@ -10,7 +10,7 @@ namespace redbrow_technical_test.Application.Auth.Login
 {
     public class LoginQuery : IRequest<string>
     {
-        public UserDto User { get; set; }
+        public UserLoginDto User { get; set; }
     }
 
     public class LoginQueryHandler : IRequestHandler<LoginQuery, string>
