@@ -37,6 +37,7 @@ namespace redbrow_technical_test.Application.Users
         /// <summary>
         /// Nacionalidad del usuario.
         /// </summary>
+        [Required]
         public string Nationality { get; set; } = string.Empty;
     }
 }

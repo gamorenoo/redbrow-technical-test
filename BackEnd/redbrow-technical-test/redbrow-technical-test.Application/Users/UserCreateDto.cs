@@ -1,18 +1,14 @@
-﻿using redbrow_technical_test.Domain.Common;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace redbrow_technical_test.Domain.Users
+namespace redbrow_technical_test.Application.Users
 {
-    /// <summary>
-    /// Usuario del sistema
-    /// </summary>
-    public class User: AuditableEntity
+    public class UserCreateDto
     {
-        /// <summary>
-        /// Identificador único del usuario.
-        /// </summary>
-        public Guid Id { get; set; }
-
         /// <summary>
         /// Nombre del usuario.
         /// </summary>

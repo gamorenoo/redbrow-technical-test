@@ -1,14 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
-using redbrow_technical_test.Application.Users.GetPaginated;
-using redbrow_technical_test.Domain.Common;
+using redbrow_technical_test.Application.Common.Utilities;
 using redbrow_technical_test.Domain.Users;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace redbrow_technical_test.Application.Users.Create
 {
     public class CreateUserCommand: IRequest<UserDto>
@@ -18,17 +11,19 @@ namespace redbrow_technical_test.Application.Users.Create
 
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, UserDto>
     {
-        private IUserCommandRepository _usercommandRepository;
+        private IUserCommandRepository _userCommandRepository;
         private readonly IMapper _mapper;
 
-        public CreateUserCommandHandler(IUserCommandRepository usercommandRepository, IMapper mapper)
+        public CreateUserCommandHandler(IUserCommandRepository userCommandRepository, IMapper mapper)
         {
             _mapper = mapper;
-            _usercommandRepository = usercommandRepository;
+            _userCommandRepository = userCommandRepository;
         }
 
         public async Task<UserDto> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
+            request.User.Email.ValidateEmail();
+
             User user = new User() { 
                 Id = Guid.NewGuid(),
                 Name = request.User.Name,
@@ -37,7 +32,7 @@ namespace redbrow_technical_test.Application.Users.Create
                 Nationality = request.User.Nationality
             };
 
-            user = await _usercommandRepository.CreateAsync(user);
+            user = await _userCommandRepository.CreateAsync(user);
 
             return _mapper.Map<UserDto>(user);
 
