@@ -25,7 +25,7 @@ El principal objetivo de esta arquitectura es la capacidad de separar el código
 ## Requisitos Previos
 Asegúrate de tener Docker y Docker Compose instalados en tu máquina antes de comenzar.
 
-## Instrucciones para Ejecutar APi
+## Instrucciones para Ejecutar APi (Carpeta BackEnd)
 
 ### Paso 1: Configurar la Base de Datos
 1. Navega a la carpeta "BackEnd\redbrow-technical-test\docker-image-bd" en el directorio del proyecto.
@@ -38,7 +38,7 @@ Asegúrate de tener Docker y Docker Compose instalados en tu máquina antes de c
 1. Una vez se tenga la apicación en visual studio y haya sido ejecutada, se debe generar un token de acceso con los datos Usuario: gustavoamoreno@outlook.com -- > Password: 0123456789, este es el unico usuario parametrizado. Lo anterior se indica en la documentacoin del Swagger
 
 
-## Instrucciones para Ejecutar FRONT
+## Instrucciones para Ejecutar FRONT (Carpeta FrontEnd)
 
 Este proyecto hace uso del Api para realizar las operaciones CRUD mencionadas anterioemente
 
@@ -74,5 +74,4 @@ Este proyecto hace uso del Api para realizar las operaciones CRUD mencionadas an
 - **Autenticación JWT:** La aplicación utiliza JWT para autenticar a los usuarios. Un token JWT se obtiene al iniciar sesión con las credenciales proporcionadas.
 - **Operaciones CRUD de Usuarios:** La aplicación permite crear, leer usuarios a través de la API.
 
-## Notas Importantes
 
