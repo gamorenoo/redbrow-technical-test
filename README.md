@@ -1,7 +1,7 @@
 # redbrow-technical-test API
 
-Este proyecto es una API de gestión de usuarios en al cual se pueden realizar operaciones CRUD de usuarios (crear, editar, eliminar y obtener información sobre usuarios)
-El proyecto utiliza Docker y Docker Compose para facilitar la configuración del entorno de desarrollo. El proyecto usa autnticacion con JWT para brindar acceso autorizado 
+Este proyecto es una API de gestión de usuarios en al cual se pueden realizar operaciones CRUD (crear, editar, eliminar y obtener información sobre usuarios)
+El proyecto utiliza Docker y Docker Compose para facilitar la configuración del entorno de desarrollo. Se usa autnticación con JWT para brindar acceso autorizado 
 a los métodos expuestos.
 
 ## 2. Solución
@@ -17,6 +17,7 @@ El principal objetivo de esta arquitectura es la capacidad de separar el código
 * Entity Framework Core 7
 * JWT
 * MediatR
+* CQRS
 * AutoMapper
 * Docker
 * Visual studio Comunity 2022
